@@ -1,0 +1,42 @@
+footer{
+    grid-area: footer;
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to bottom, $color-footer, $color-footer-degradado);
+    width: 100%;
+    height: 100px;
+    @include flex(row, center, center);
+    color: white;
+}
+
+.footer {
+    &_contacto{
+        grid-area: footer;
+        font-family: 'Inter', sans-serif;
+        background-color: map-get($colores-pag, color-footer);
+        width: 100%;
+        height: 100px;
+        @include flex(row, center, center);
+        color: white;
+    }
+
+    &_index{
+        position: relative;
+        z-index: 1;
+    }
+
+    &--inline{
+        display:inline;
+    }
+}
+
+.enlaceBlanco_footer {
+    text-decoration: none;
+    font-weight:300;
+    color:white;
+    font-size: 16px;
+}
+
+.filtroInvertir{
+    filter: invert(1);
+}
+
