@@ -81,8 +81,11 @@ main {
     font-weight: bolder;
 }
 
-
 .margin{
+
+    &Left--5px{
+        margin-left: 5px;
+    }
 
     &Left--10px{
         margin-left: 10px;
@@ -140,10 +143,10 @@ main {
 
 #plantilla_formulario {
     display: grid;
-    height: 245px;
+    height: 100%;
     width: 620px;
     grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-row-gap: 15px;
     grid-template-areas: 
         "prefieres prefieres prefieres prefieres"
         "nombre camponombre mail campomail"
@@ -153,7 +156,7 @@ main {
         "enviar enviar enviar enviar"
         "icons icons icons icons"
     ;
-    grid-template-rows: 25px 25px 25px 25px 120px 25px;
+    grid-template-rows: 25px 25px 25px 25px 120px 25px 50px;
     grid-template-columns: 1fr 3fr 1fr 3fr;
 }
 
@@ -237,6 +240,13 @@ main {
 
 }
 
+.scale_80 {
+    transform: scale(0.8);
+}
+
+.scale_formulario {
+    transform: scale(1);
+}
 
 
 .formulario{
@@ -358,8 +368,6 @@ section{
         transform:scale(1.1)
     }
 
-
-
 }
 
 
@@ -399,7 +407,6 @@ section{
 
         &_navegacion{
             grid-area: navegacion;
-            /* background-color: #000000; */
             background-image: linear-gradient(to right, #000, #444);
             width: 100%;
             color: white;
@@ -447,9 +454,23 @@ section{
     .enlaceBlanco_footer {
         font-size: 14px;
     }
+
+    .footer_index {
+        height: 100px;
+    }
 }
 
+
+
+
+
+
+
 @media screen and (max-width:643px) {
+
+    #plantilla {
+        grid-template-rows: 100px 30px auto 50px;    
+    }
 
     h1 {
         font-size: 24px;
@@ -482,9 +503,9 @@ section{
 
     #plantilla_formulario {
         display: grid;
-        height: 245px;
+        height: 100%;
         width: 310px;
-        grid-template-rows: 25px 25px 25px 25px 120px 25px;
+        grid-template-rows: 25px 25px 25px 25px 120px 25px 50px;
         grid-template-columns: 1fr 3fr 1fr 3fr;
     }
     
@@ -554,7 +575,27 @@ section{
         }
 
     }
+
+    .footer_completo_display {
+        display: none;
+    }
+    
+    .footer_mobile_display {
+        display: inline;
+    }
+    
+    .scale_formulario {
+        transform: scale(0.8);
+    }
+
+    .footer_index {
+        height: 50px;
+    }
 } 
+
+
+
+
 
 
 //CLASES DE BOOTSTRAP

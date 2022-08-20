@@ -3,7 +3,6 @@ footer{
     font-family: 'Inter', sans-serif;
     background-image: linear-gradient(to bottom, $color-footer, $color-footer-degradado);
     width: 100%;
-    height: 100px;
     @include flex(row, center, center);
     color: white;
 }
@@ -14,12 +13,18 @@ footer{
         font-family: 'Inter', sans-serif;
         background-color: map-get($colores-pag, color-footer);
         width: 100%;
-        height: 100px;
         @include flex(row, center, center);
         color: white;
     }
 
     &_index{
+        position:fixed;
+        bottom: 0px;
+        height: 100px;
+        z-index: 1;
+    }
+
+    &_paginas{
         position: relative;
         z-index: 1;
     }
@@ -40,3 +45,23 @@ footer{
     filter: invert(1);
 }
 
+
+.footer_completo_display {
+    display: inline;
+}
+
+.footer_mobile_display {
+    display: none;
+}
+
+.footer_scale {
+    transform: scale(0.8);
+}
+
+.footer_flex_mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
